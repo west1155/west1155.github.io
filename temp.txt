@@ -1,0 +1,12 @@
+<WorkItem>
+                <WorkPicture src={futwork1} alt={''}/>
+            <Describtion>
+                <DescribtionTitle>TodoList</DescribtionTitle>
+                <Desc_Feature>React RTK MaterialUI</Desc_Feature>
+                <Desc_Text>
+                    TodoList written in React with TypeScript. The app allows you to add, delete, and
+                    mark tasks as completed. The app also has a filter options. Uses API for data storage.
+                </Desc_Text>
+            </Describtion>
+
+        </WorkItem>
