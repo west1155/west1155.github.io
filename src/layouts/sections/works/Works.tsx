@@ -4,7 +4,7 @@ import {EmailMe} from "../about/EmailMe";
 
 import futwork1 from '../../../assets/work1.webp'
 import futwork2 from '../../../assets/work2.webp'
-import futwork3 from '../../../assets/work3.png'
+import futwork3 from '../../../assets/work3.webp'
 
 
 export type WorkType = {
@@ -31,19 +31,17 @@ const worksContainer = [
         id: 2,
         src_img: futwork2,
         alt: '',
-        title: 'Designing Dashboards',
-        feature: 'Dashboard',
-        time: '2020',
-        text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+        title: 'Weather App',
+        feature: 'REST API Axios React Redux Toolkit MaterialUI',
+        text: 'Weather App written in React with TypeScript. The app allows you to see the weather in your city. The app uses Redux for state management. Uses API for data storage. Few features still in progress...',
     },
     {
         id: 3,
         src_img: futwork3,
         alt: '',
-        title: 'Designing Dashboards',
-        feature: 'Dashboard',
-        time: '2020',
-        text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+        title: 'Social network',
+        feature: 'React Redux API LocalStorage RTK MaterialUI still in progress...',
+        text: 'A simple social network with the ability to see the list of Users, crete new users. The app uses Redux for state management. Uses API for data storage and local storage content.',
     },
 ]
 

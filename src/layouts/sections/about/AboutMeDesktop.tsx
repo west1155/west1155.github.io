@@ -6,6 +6,16 @@ import me_ai from '../../../assets/me_ai.webp'
 
 export const AboutMeDesktop = () => {
 
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        // Assuming 'document.pdf' is located in the 'public/assets' directory
+        link.href = `${process.env.PUBLIC_URL}/document.pdf`;
+        link.download = 'Alex_Leimberg_Resume.pdf'; // Suggested filename for saving
+        document.body.appendChild(link); // Append to the document
+        link.click(); // Programmatically click the link to trigger the download
+        document.body.removeChild(link); // Clean up by removing the link from the document
+    };
+
     return (
         <StyledMain>
 
@@ -23,12 +33,12 @@ export const AboutMeDesktop = () => {
                             /></H1>
 
                         <StyleText>
-                            Doncaster, UK-based junior web developer. I create digital products that are both functional
-                            and beautiful.
+                            Doncaster, UK-based graduate junior web developer.
+                            I create digital products that are both functional and beautiful.
                         </StyleText>
 
 
-                        <Button>Download Resume</Button>
+                        <Button onClick={handleDownload}>Download Resume</Button>
                     </Promo_Column>
                     <Promo_Column>
                         <Photo/>

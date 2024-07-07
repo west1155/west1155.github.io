@@ -3,14 +3,15 @@ import styled from "styled-components";
 import {GlobalSvgSelector} from "../../components/GlobalSvgSelector";
 
 export const Footer = () => {
+
+    const skills_svg = ['html_logo', 'css_logo', 'js_logo', 'react_logo', 'java_logo', 'css_logo', 'git_logo',
+        'nextjs_logo', 'storybook_logo', 'sass_logo', 'ts_logo'];
     return (
         <StyledFooter>
             <Container>
-                <GlobalSvgSelector id={'facebook_logo'}/>
-                <GlobalSvgSelector id={'instagram_logo'}/>
-                <GlobalSvgSelector id={'twitter_logo'}/>
-                <GlobalSvgSelector id={'linkedIn_logo'}/>
-                <GlobalSvgSelector id={'css_logo'}/>
+                {skills_svg.map((svg, index) => (
+                    <GlobalSvgSelector key={index} svg={svg} />
+                ))}
             </Container>
             <Copyright>
                 Only Copyleft {new Date().getFullYear()} All rights reserved

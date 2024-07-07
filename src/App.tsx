@@ -8,7 +8,7 @@ import { Footer } from "./layouts/footer/Footer";
 const App: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [showFullScreen, setShowFullScreen] = useState(false);
-
+    //
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsVisible(true);
@@ -22,15 +22,15 @@ const App: React.FC = () => {
     }
 
     return (
-        <div className={`container ${showFullScreen ? 'full-screen' : ''}`}>
-            {!showFullScreen && (
+        <div className="app-container">
+            <div className={`intro-container ${showFullScreen ? 'hidden' : ''}`}>
                 <div className={`intro ${isVisible ? 'visible' : 'hidden'}`}>
                     <h1>Hi, I'm Alex Leimberg, a web developer</h1>
                     <button className={`button ${isVisible ? 'visible' : ''}`} onClick={handleClick}>
                         Know More
                     </button>
                 </div>
-            )}
+            </div>
             {showFullScreen && (
                 <div className="container-main">
                     <Header />
