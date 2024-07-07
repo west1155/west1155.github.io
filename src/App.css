@@ -52,6 +52,14 @@ body, html {
     align-items: center;
 }
 
+.container-main.fullscreen {
+    position: absolute;
+    justify-content: center;
+    top: 75px;
+    left: 0;
+    width: 100%;
+}
+
 .title, .button {
     visibility: hidden;
     opacity: 0;

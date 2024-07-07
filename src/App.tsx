@@ -32,11 +32,11 @@ const App: React.FC = () => {
                 </div>
             </div>
             {showFullScreen && (
-                <div className="container-main">
-                    <Header />
-                    <AboutMe />
-                    <Works />
-                    <Footer />
+                <div className={`container-main ${showFullScreen ? 'fullscreen' : ''}`}>
+                    {/*<Header />*/}
+                    <AboutMe/>
+                    <Works/>
+                    <Footer/>
                 </div>
             )}
         </div>

@@ -34,7 +34,6 @@ export const AboutMeDesktop = () => {
 
                         <StyleText>
                             Doncaster, UK-based graduate junior web developer.
-                            I create digital products that are both functional and beautiful.
                         </StyleText>
 
 
@@ -104,6 +103,7 @@ const Promo_Column = styled.div`
 `
 
 const Container = styled.div`
+    width: 960px;
     background-color: #ffffff;
     margin: 0 auto;
 `
