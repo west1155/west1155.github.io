@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Header } from "./layouts/header/Header";
 import { AboutMe } from "./layouts/sections/about/AboutMe";
 import { Works } from "./layouts/sections/works/Works";
 import { Footer } from "./layouts/footer/Footer";
 
+import ReactGA from 'react-ga';
+
 const App: React.FC = () => {
+    ReactGA.initialize('G-9TCQCQ7CFD'); // Replace with your Google Analytics tracking ID
+    ReactGA.pageview(window.location.pathname + window.location.search);
     const [isVisible, setIsVisible] = useState(false);
     const [showFullScreen, setShowFullScreen] = useState(false);
     //
