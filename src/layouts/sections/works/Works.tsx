@@ -1,6 +1,5 @@
 import React from 'react';
 import {WorkDesktop} from "./WorksDesktop";
-import {EmailMe} from "../about/EmailMe";
 
 import futwork1 from '../../../assets/work1.webp'
 import futwork2 from '../../../assets/work2.webp'
@@ -15,6 +14,7 @@ export type WorkType = {
     feature: string
     time?: string
     text: string
+    link?: string
 }
 
 
@@ -26,7 +26,8 @@ const worksContainer = [
         title: 'TodoList',
         feature: 'React RTK MaterialUI',
         text: 'TodoList written in React with TypeScript. The app allows you to add, delete, and mark tasks as completed. The app also has a filter options. Uses API for data storage.',
-        onCLick: () => window.location.href = 'https://west1155.github.io/todolist'
+        link: 'https://west1155.github.io/todolist/'
+
     },
     {
         id: 2,
@@ -35,6 +36,7 @@ const worksContainer = [
         title: 'Weather App',
         feature: 'REST API Axios React Redux Toolkit MaterialUI',
         text: 'Weather App written in React with TypeScript. The app allows you to see the weather in your city. The app uses Redux for state management. Uses API for data storage. Few features still in progress...',
+        link: 'https://west1155.github.io/weather_app/'
     },
     {
         id: 3,

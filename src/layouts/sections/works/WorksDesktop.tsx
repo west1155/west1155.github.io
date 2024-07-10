@@ -18,10 +18,11 @@ export const WorkDesktop: React.FC<WorksDesktopPropsType> = (props) => {
                         <WorkPicture
                             src={work.src_img}
                             alt={work.title}
-                            onClick={props.onClick}
                         />
                         <Describtion>
-                            <DescribtionTitle onClick={props.onClick}>{work.title}</DescribtionTitle>
+                            <DescribtionTitle href={work.link} target="_blank" rel="noopener noreferrer">
+                                    {work.title}
+                            </DescribtionTitle>
                             <Desc_Feature>{work.feature}</Desc_Feature>
                             <Desc_Text>{work.text}</Desc_Text>
                         </Describtion>
@@ -73,7 +74,7 @@ const WorkPicture = styled.img`
     cursor: pointer;
 `;
 
-const DescribtionTitle = styled.div`
+const DescribtionTitle = styled.a`
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
