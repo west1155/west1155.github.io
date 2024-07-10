@@ -26,6 +26,7 @@ const worksContainer = [
         title: 'TodoList',
         feature: 'React RTK MaterialUI',
         text: 'TodoList written in React with TypeScript. The app allows you to add, delete, and mark tasks as completed. The app also has a filter options. Uses API for data storage.',
+        onCLick: () => window.location.href = 'https://west1155.github.io/todolist'
     },
     {
         id: 2,

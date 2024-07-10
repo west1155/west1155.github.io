@@ -4,6 +4,7 @@ import {WorkType} from "./Works";
 
 type WorksDesktopPropsType = {
     worksContainer: WorkType[]
+    onClick?: () => void
 };
 
 export const WorkDesktop: React.FC<WorksDesktopPropsType> = (props) => {
@@ -14,9 +15,13 @@ export const WorkDesktop: React.FC<WorksDesktopPropsType> = (props) => {
                 {props.worksContainer.map((work: WorkType) => (
                     <WorkItem key={work.id}>
                         {/* Example content inside WorkItem */}
-                        <WorkPicture src={work.src_img} alt={work.title} />
+                        <WorkPicture
+                            src={work.src_img}
+                            alt={work.title}
+                            onClick={props.onClick}
+                        />
                         <Describtion>
-                            <DescribtionTitle>{work.title}</DescribtionTitle>
+                            <DescribtionTitle onClick={props.onClick}>{work.title}</DescribtionTitle>
                             <Desc_Feature>{work.feature}</Desc_Feature>
                             <Desc_Text>{work.text}</Desc_Text>
                         </Describtion>
@@ -65,6 +70,7 @@ const WorkPicture = styled.img`
     &:hover {
         transform: scale(2);
     }
+    cursor: pointer;
 `;
 
 const DescribtionTitle = styled.div`
@@ -72,7 +78,13 @@ const DescribtionTitle = styled.div`
     font-size: 30px;
     line-height: 36px;
     color: #21243d;
-    padding-right: 500px;
+    padding-right: 500px; 
+    
+    &:hover {
+        text-decoration: underline;
+        color: #4a494c;
+        cursor: pointer;
+    }
 `;
 
 const Desc_Feature = styled.div`
